@@ -323,13 +323,14 @@ class Home_Testimonials extends \Elementor\Widget_Base {
 
 	}
 
+
 	protected function content_template() {
 		?>
 		<div class="eshop_home_testimonial_carousel">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 eshop_home_testimonial_carousel_top text-center ">
-						<h2>{{{ settings.testimonial_header_text}}}</h2>
+						<h2>{{{ settings.testimonial_header_text }}}</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -410,6 +411,8 @@ class Home_Testimonials extends \Elementor\Widget_Base {
         </script>
 		<?php
 	}
+
+
 
 
 }

@@ -249,7 +249,7 @@ class Elementor_Widget_Development {
 		add_action( 'plugins_loaded', array( $this, 'localization_setup' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts' ) );
 		add_action( 'elementor/widgets/register', array( $this, 'register_custom_elementor_widgets' ) );
-		//add_action( 'plugins_loaded', array( $this, 'on_plugins_loaded' ), - 1 );
+		add_action( 'elementor/elements/categories_registered', array( $this, 'custom_widget_category' ) );
 	}
 
 	public function add_scripts() {
@@ -259,6 +259,7 @@ class Elementor_Widget_Development {
 		wp_register_style( 'owl-carousel-theme-default', $css_url . '/vendors/owl-carousel/owl.theme.default.css' );//phpcs:ignore
 		wp_register_style( 'home-testimonial', $css_url . '/home-testimonial.css' );//phpcs:ignore
 		wp_register_style( 'custom-slider', $css_url . '/custom-slider.css' );//phpcs:ignore
+		wp_register_style('product-view', $css_url. '/product-view.css' ); //phpcs:ignore
 		wp_register_script('owl-carousel-scripts', $js_url.'/vendors/owl-carousel/owl.carousel.js', array('jquery'), $this->get_version(),false );//phpcs:ignore
 
 	}
@@ -272,8 +273,10 @@ class Elementor_Widget_Development {
 	public function register_custom_elementor_widgets( $widgets_manager ) {
 		require_once __DIR__ . '/includes/elementor/home-testimonials.php';
 		require_once __DIR__ . '/includes/elementor/custom-slider.php';
+		require_once __DIR__ . '/includes/elementor/product-view.php';
 		$widgets_manager->register( new \Home_Testimonials() );
 		$widgets_manager->register( new \Custom_Sliders() );
+		$widgets_manager->register( new \Product_View() );
 
 	}
 	/**
@@ -287,6 +290,23 @@ class Elementor_Widget_Development {
 	public function on_plugins_loaded() {
 		do_action( 'elementor_widget_development__loaded' );
 	}
+
+	/**
+	 * Register custom category.
+	 *
+	 * @param Elementor\Elements_Manager $elements_manager Element manager.
+	*/
+	public function custom_widget_category( $elements_manager ) {
+		$elements_manager->add_category(
+			'eshop-custom-category',
+			array(
+				'title' => __( 'Eshop Elementor', '' ),
+			)
+
+		);
+	}
+
+	//add_action( 'plugins_loaded', array( $this, 'on_plugins_loaded' ), - 1 );
 
 }
 

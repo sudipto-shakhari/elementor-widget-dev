@@ -1,0 +1,60 @@
+.product_extra_info {
+    position: absolute;
+    top: 0;
+    left: 54px;
+    width: 66px;
+    height: 36px;
+    text-align: center;
+    background-color: #6c6a74;
+    transform-origin: top left;
+    transform: rotate(90deg);
+}
+
+.product_extra_info .badge {
+    display: block;
+    font-size: 16px;
+    line-height: 36px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.product_info {
+    width: 100%;
+    padding-top: 36px;
+    padding-bottom: 38px;
+}
+
+.product_info .title a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1b1b1b;
+    line-height: 1.1;
+    transition: all 200ms ease;
+}
+
+.product_info .title a:hover, .product_info .title a:focus, .product_info .title a:active {
+    color: #e95a5a;
+}
+
+.product_info .price {
+    font-size: 16px;
+    line-height: 0.75;
+    font-weight: 500;
+    color: #6c6a74;
+    margin-top: 13px;
+}
+
+.woocommerce div.product span.onsale {
+    top: 0;
+    left: 56px;
+    width: 66px;
+    height: 36px;
+    text-align: center;
+    border-radius: 0;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    font-size: 16px;
+    line-height: 36px;
+    min-height: 36px;
+    min-width: 66px;
+}
