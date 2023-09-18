@@ -1,0 +1,248 @@
+/* eshop__image__gallery__area */
+.eshop__image__gallery__area {
+    background: #EAECEF;
+}
+.eshop__gallery__carousel {
+    position: relative;
+}
+.eshop__gallery__carousel.owl-carousel .owl-nav.disabled{
+    display: block;
+}
+.eshop__gallery__carousel .owl-nav button {
+    background-color: transparent;
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+.eshop__gallery__carousel .owl-nav button:hover {
+    background: transparent !important;
+}
+.eshop__gallery__carousel .owl-nav button img {
+    width: 25px;
+    height: 50px;
+}
+.eshop__gallery__carousel .owl-nav button.owl-next,
+.eshop__gallery__carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 47%;
+    transform: translateY(-47%);
+    -webkit-transform: translateY(-47%);
+    -moz-transform: translateY(-47%);
+    -ms-transform: translateY(-47%);
+    -o-transform: translateY(-47%);
+}
+.eshop__gallery__carousel .owl-nav button.owl-prev {
+    left: 35px;
+}
+.eshop__gallery__carousel .owl-nav button.owl-next {
+    right: 35px;
+}
+.eshop__gallery__carousel .owl-item.active.center .item {
+    cursor: pointer;
+}
+.eshop__gallery__carousel .eshop__gallery_photo {
+    display: flex;
+    flex-direction: column;
+}
+.eshop__gallery__carousel .eshop__gallery_photo img {
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center;
+    aspect-ratio: 3 / 2;
+}
+.eshop__gallery__carousel .owl-item {
+    opacity: 0.5;
+    overflow: hidden;
+}
+.eshop__gallery__carousel .owl-item.active.center {
+    opacity: 1;
+    pointer-events: unset;
+    overflow: visible;
+}
+.eshop__gallery__carousel .owl-item.active .item p {
+    display: none;
+}
+.eshop__gallery__carousel .owl-item.active.center .item p {
+    display: block;
+    color: #0A1627;
+    margin-bottom: -50px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    word-break: break-word;
+    transform: scaleX(1) scaleY(1);
+    -webkit-transform: scaleX(1) scaleY(1);
+    -moz-transform: scaleX(1) scaleY(1);
+    -ms-transform: scaleX(1) scaleY(1);
+    -o-transform: scaleX(1) scaleY(1);
+}
+.eshop__gallery__carousel .owl-stage {
+    display: flex;
+    align-items: flex-start;
+    padding: 8rem 0;
+    padding-bottom: 10rem;
+}
+/*Start new design eshop__gallery__carousel */
+.eshop__gallery__carousel .owl-item.active.center {
+    transform: scaleY(1.15) scaleX(1.15) !important;
+    -webkit-transform: scaleY(1.15) scaleX(1.15) !important;
+    -moz-transform: scaleY(1.15) scaleX(1.15) !important;
+    -ms-transform: scaleY(1.15) scaleX(1.15) !important;
+    -o-transform: scaleY(1.15) scaleX(1.15) !important;
+    transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    position: relative;
+    z-index: 2;
+}
+.eshop__gallery__carousel .owl-item .item .eshop__gallery_photo {
+    margin-left: -80px;
+    margin-right: -80px;
+}
+.eshop__gallery__carousel .owl-item {
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+}
+
+.eshop__gallery__carousel .left-of-center {
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+    -moz-transform: scale(1) !important;
+    -ms-transform: scale(1) !important;
+    -o-transform: scale(1) !important;
+    position: relative;
+    z-index: 1;
+}
+.eshop__gallery__carousel .right-of-center {
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+    -moz-transform: scale(1) !important;
+    -ms-transform: scale(1) !important;
+    -o-transform: scale(1) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.eshop__gallery__carousel.eshop__gallery__images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 16px;
+}
+
+.eshop__gallery__carousel.eshop__gallery__images .item {
+    max-width: 760px;
+}
+
+.eshop__gallery__carousel.eshop__gallery__images .item p {
+    display: block;
+    color: #0A1627;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/*End new design eshop__gallery__carousel */
+
+/* eshop__image__gallery__area */
+/* eshop__gallery__popup__area */
+
+.eshop__gallery__popup__area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #EAECEF;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.eshop__gallery__popup__area.active-Popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eshop__gallery__popup__area .eshop__gallery__popup_main {
+    max-width: 96%;
+    height: 96%;
+    margin: 2% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.eshop__gallery__popup__area .eshop__gallery__popup_main .eshop-gallery-modal-content {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.eshop__gallery__popup__area .eshop__gallery__popup_img img {
+    max-width: 98%;
+    max-height: 92vh;
+}
+.eshop__gallery__popup__area .eshop__gallery__popup_crose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 99999;
+    background: #00000026;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.eshop__gallery__popup__area .eshop__gallery__popup_img {
+    text-align: center;
+}
+.eshop__gallery__popup__area .eshop__gallery__popup_crose img {
+    cursor: pointer;
+}
+.eshop__gallery__carousel .owl-item {
+    pointer-events: none;
+}
+
+
+.eshop__gallery__popup__area .prev,
+.eshop__gallery__popup__area .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 8px;
+    margin-top: -20px;
+    background: transparent;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.eshop__gallery__popup__area .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.eshop__gallery__popup__area .prev img,
+.eshop__gallery__popup__area .next img {
+    height: 40px;
+}
